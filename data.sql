@@ -21,3 +21,77 @@ INSERT INTO animals(id,name,date_of_birth,escape_attempts,neutered,weight_kg) VA
 INSERT INTO animals(id,name,date_of_birth,escape_attempts,neutered,weight_kg) VALUES(10,'Blossom','10-13-1998',3,FALSE,17);
 
 INSERT INTO animals(id,name,date_of_birth,escape_attempts,neutered,weight_kg) VALUES(11,'Ditto','05-14-2022',4,TRUE,22);
+
+/* Insert the following data into the owners table */
+INSERT INTO owners(full_name,age) VALUES('Sam Smith',34);
+ 
+INSERT INTO owners(full_name,age) VALUES('Jennifer Orwell',19);
+ 
+INSERT INTO owners(full_name,age) VALUES('BOb',45);
+ 
+INSERT INTO owners(full_name,age) VALUES('Melody Pond',77);
+ 
+INSERT INTO owners(full_name,age) VALUES('Dean Winchester',14);
+ 
+INSERT INTO owners(full_name,age) VALUES('Jodie Whittaker',38);
+
+/* Insert the following data into the Species table */
+INSERT INTO species(name) VALUES('Pokemon');
+INSERT INTO species(name) VALUES('Digimon');
+
+/* Modify your inserted animals so it includes the species_id value */
+/* If the name ends in "mon" it will be Digimon */
+UPDATE animals
+SET species_id = 1         
+WHERE name LIKE '%mon';
+
+/*All other animals are Pokemon*/
+UPDATE animals
+SET species_id = 2
+WHERE NOT name LIKE '%mon';
+
+/* Modify your inserted animals to include owner information (owner_id) */
+UPDATE animals
+SET owner_id = 1
+WHERE name = 'Agumon';
+ 
+vet_clinic=# UPDATE animals
+SET owner_id = 2
+WHERE name = 'Gabumon' and name = 'Pikachu';
+ 
+vet_clinic=# UPDATE animals
+SET owner_id = 2
+WHERE name = 'Gabumon';
+ 
+vet_clinic=# UPDATE animals
+SET owner_id = 2
+WHERE name = 'Pikachu';
+ 
+vet_clinic=# UPDATE animals
+SET owner_id = 3
+WHERE name = 'Devimon';
+ 
+vet_clinic=# UPDATE animals
+SET owner_id = 3
+WHERE name = 'Plantmon';
+ 
+vet_clinic=# UPDATE animals
+SET owner_id = 4
+WHERE name = 'Charmander';
+ 
+vet_clinic=# UPDATE animals
+SET owner_id = 4
+WHERE name = 'Blossom';
+ 
+vet_clinic=# UPDATE animals
+SET owner_id = 4
+WHERE name = 'Squirtle';
+ 
+vet_clinic=# UPDATE animals
+SET owner_id = 5
+WHERE name = 'Angemon';
+ 
+vet_clinic=# UPDATE animals
+SET owner_id = 5
+WHERE name = 'Boarmon';
+ 
