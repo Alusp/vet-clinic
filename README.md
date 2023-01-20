@@ -1,6 +1,4 @@
-# Name
-
-### PET CLINIC DATABASE
+## PET CLINIC DATABASE
 > This is a database for a pet clinic. It contains information about the pets, the owners, the vets and the visits.
 > The database is created using PostgreSQL.
 
